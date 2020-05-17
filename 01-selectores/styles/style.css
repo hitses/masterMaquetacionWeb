@@ -1,0 +1,83 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+  background-color: tomato;
+  color: aliceblue;
+  padding: 10px;
+}
+
+ul li a{
+  font-size: 18px;
+  color: rgb(115, 180, 233);
+}
+
+footer a{
+  color: coral;
+}
+
+#descripcion{
+  padding: 25px;
+  background-color: #eee;
+}
+
+.parrafo{
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: lighter;
+}
+
+.parrafo1{
+  color: chocolate;
+}
+
+.parrafo3{
+  color: crimson;
+}
+
+#usuario form{
+  margin: 20px 0;
+  padding: 25px;
+}
+
+#usuario form *{
+  display: block;
+}
+
+input[type='text']{
+  margin: 5px 0 15px 0;
+  padding: 15px;
+  width: 300px;
+  font-size: 18px;
+}
+
+input[type='submit']{
+  background-color: rgb(51, 122, 51);
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Selectores hijos */
+
+#menu > li > a{
+  font-size: 18px;
+  color: rgb(149, 134, 250);
+}
+
+/* Prioridad */
+
+#saludo h1 {
+  background: brown;
+}
+
+h1 {
+  background: purple !important;
+}
