@@ -1,0 +1,43 @@
+*{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #bbb;
+}
+
+ul li:first-child{
+  color: red;
+}
+
+ul li:nth-child(2){
+  color: yellow;
+}
+
+ul li:last-child{
+  color: blueviolet;
+}
+
+a{
+  font-size: 30px;
+  color: lightsalmon;
+}
+
+a:visited{
+  color: red;
+}
+
+a:hover{
+  color: blueviolet;
+}
+
+a:active{
+  color: green;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input[type='text']{
+  margin: 20px 0 0 0;
+  padding: 10px;
+}
+
+input[type='text']:focus{
+  border: 4px solid blueviolet;
+}
