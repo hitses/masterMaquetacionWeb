@@ -1,0 +1,154 @@
+$baseColor: rgba(225, 225, 226, 0.8);
+$fontColor: rgba(141, 141, 141, 0.9);
+$fontHoverColor: rgba(66, 66, 66, 1);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+#container{
+  width: 90%;
+  height: auto;
+  min-height: 500px;
+  margin: 40px auto;
+  header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 120px;
+    border-bottom: 1px solid $baseColor;
+    .logo{
+      flex-grow: 1;
+      flex-basis: 30%;
+      padding: 10px;
+      margin: 0 0 0 20px;
+      h1{
+        font-family: Helvetica, sans-serif;
+        font-size: 35px;
+        font-style: italic;
+        font-weight: 900px;
+        color: black;
+        text-shadow: 1px 1px 0 $baseColor;
+      }
+    }
+    nav{
+      flex-grow: 1;
+      flex-basis: 45%;
+      height: 100%;
+      ul{
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 20px 0 0;
+        li{
+          a{
+            color: $fontColor;
+            padding: 15px;
+            transition: all 200ms;
+          }
+          a:hover{
+            color: $fontHoverColor;
+          }
+        }
+      }
+    }
+  }
+  #content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    #projects{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      flex-basis: 80%;
+      padding: 0 35px 0 0;
+      .project{
+        flex-grow: 1;
+        flex-basis: 250px;
+        margin: 0 20px 25px 0;
+        .image-wrap{
+          img{
+            width: 100%;
+          }
+        }
+        .project-info{
+          padding: 10px;
+          a{
+            font-size: 16px;
+            color: $fontColor;
+            text-decoration: underline;
+            transition: all 200ms;
+          }
+          a:hover{
+            color: $fontHoverColor;
+            text-decoration: none;
+          }
+          p{
+            color: $fontColor;
+          }
+        }
+      }
+    }
+    aside{
+      flex-basis: 15%;
+      margin: 0 30px 0 0;
+      padding: 15px;
+      display: flex;
+      flex-flow: column wrap;
+      h2{
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 100px;
+        color: #444;
+        padding: 0 0 10px 0;
+        margin: 0 0 20px 0;
+        border-bottom: 1px solid $baseColor;
+        text-align: center;
+      }
+      ul{
+        li{
+          padding: 0 0 20px 0;
+          a{
+            display: block;
+            text-align: center;
+            padding: 20px;
+            color: $fontColor;
+            transition: all 200ms;
+          }
+          a:hover{
+            color: $fontHoverColor;
+          }
+        }
+      }
+    }
+  }
+  footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    border-top: 1px solid $baseColor;
+    .logo{
+      opacity: 0.5;
+      flex-basis: auto;
+      h1{
+        font-family: Helvetica, sans-serif;
+        font-size: 35px;
+        font-style: italic;
+        font-weight: 900px;
+        color: black;
+        text-shadow: 1px 1px 0 $baseColor;
+      }
+    }
+  }
+}
