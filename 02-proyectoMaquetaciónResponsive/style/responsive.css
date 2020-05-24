@@ -1,0 +1,23 @@
+@media (max-width: 1250px){
+  .wrap{
+    width: 90%;
+    margin: auto;
+  }
+
+  .card{
+    width: 17%;
+    margin: 1.45%;
+  }
+
+  #articles{
+    width: 65%;
+  }
+
+  footer .wrap > div{
+    width: 25.5%;
+  }
+
+  footer #browsers a img{
+    width: 15%;
+  }
+}

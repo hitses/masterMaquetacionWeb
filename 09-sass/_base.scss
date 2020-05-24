@@ -1,0 +1,107 @@
+/* Variables */
+$fuente: sans-serif, Arial;
+$colorFondo: #39a;
+$colorTitulos: rgb(185, 31, 31);
+$colorLetra: rgb(172, 52, 52);
+
+/* Anidación y uso de variables */
+body{
+  background-color: $colorFondo;
+  h1{
+    font-family: $fuente;
+  }
+  p{
+    color: $colorLetra;
+  }
+}
+
+.caja{
+  h1{
+    color: rgb(79, 79, 167);
+  }
+  p{
+    color: rgb(121, 194, 11);
+  }
+  .info{
+    font-size: 26px;
+    span{
+      color: goldenrod;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Mixins o funciones */
+@mixin crearBordes($color, $size) {
+  border: 5px solid $color;
+  border-radius: $size;
+  box-shadow: 0 0 $size $color;
+}
+
+.caja{
+  @include crearBordes(red, 10px);
+}
+
+.listado{
+  @include crearBordes(green, 5px);
+}
+
+// Herencia
+%alert-normal{
+  border: 1px solid grey;
+  background-color: rgb(57, 130, 224);
+  padding: 10px;
+  width: 100%;
+}
+
+.alert{
+  @extend %alert-normal;
+  p{
+    color: black;
+  }
+}
+
+.alert-danger{
+  @extend %alert-normal;
+  background-color: red;
+  p{
+    color: black;
+  }
+}
+
+.alert-success{
+  @extend %alert-normal;
+  background-color: springgreen;
+  p{
+    color: black;
+  }
+}
+
+// Operadores
+h1{
+  font-size: 20px + 5px;
+}
+
+// Condicionales
+h1{
+  @if $colorFondo == #39a {
+    color: goldenrod;
+  } @else if $colorFondo == black{
+    color: lightsalmon;
+  } @else{
+    color: green;
+  }
+}
+
+// Bucles
+$contador: 1;
+@for $contador from 1 through 4{
+  .listado{
+    ul{
+      li:nth-child(#{$contador}){
+        color: orange;
+        font-size: $contador * 5px;
+      }
+    }
+  }
+}
